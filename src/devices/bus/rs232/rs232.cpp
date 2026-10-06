@@ -191,6 +191,7 @@ void default_rs232_devices(device_slot_interface &device)
 	device.option_add("msystems_mouse",MSYSTEMS_HLE_SERIAL_MOUSE);
 	device.option_add("nss_tvi",       NSS_TVINTERFACE);
 	device.option_add("null_modem",    NULL_MODEM);
+	device.option_add("null_modem_terminal", NULL_MODEM_TERMINAL);
 	device.option_add("patch",         RS232_PATCH_BOX);
 	device.option_add("printer",       SERIAL_PRINTER);
 	device.option_add("pty",           PSEUDO_TERMINAL);

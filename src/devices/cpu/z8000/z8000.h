@@ -110,6 +110,10 @@ public:
 	auto mo() { return m_mo_out.bind(); }
 	void mi_w(int state) { m_mi = state; } // XXX: this has to apply in the middle of an insn for now
 	auto ns() { return m_ns_out.bind(); }
+	// Optional standard word-I/O bus callbacks retain the original port
+	// address (including A0) for byte-wide peripherals on a word bus.
+	auto io_word_r() { return m_io_word_r.bind(); }
+	auto io_word_w() { return m_io_word_w.bind(); }
 
 	bool is_ifetch1() const noexcept { return (m_op_valid == 0); }
 
@@ -148,6 +152,8 @@ protected:
 	address_space_config m_stack_config;
 	address_space_config m_sio_config;
 	devcb_read16::array<4> m_iack_in;
+	devcb_read16 m_io_word_r;
+	devcb_write16 m_io_word_w;
 	devcb_write_line m_mo_out;
 	devcb_write_line m_ns_out;
 	devcb_write_line m_busack_out;

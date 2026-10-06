@@ -126,6 +126,22 @@ void s8k_cpu_base::base_device_resolve_objects()
 	m_maincpu->busack().append(*m_bus, FUNC(zbi_bus_device::busack_w));
 	m_maincpu->viack().set(*this, FUNC(s8k_cpu_base::viack_r));
 	m_maincpu->nviack().set(*this, FUNC(s8k_cpu_base::nviack_r));
+	m_maincpu->io_word_r().set(*this, FUNC(s8k_cpu_base::io_word_r));
+	m_maincpu->io_word_w().set(*this, FUNC(s8k_cpu_base::io_word_w));
+}
+
+uint16_t s8k_cpu_base::io_word_r(offs_t port)
+{
+	uint16_t data;
+	if (m_bus->io_word_r(port, data)) return data;
+	data = m_maincpu->space(AS_IO).read_word(port & ~1U);
+	return BIT(port, 0) ? swapendian_int16(data) : data;
+}
+
+void s8k_cpu_base::io_word_w(offs_t port, uint16_t data)
+{
+	if (!m_bus->io_word_w(port, data))
+		m_maincpu->space(AS_IO).write_word(port & ~1U, BIT(port, 0) ? swapendian_int16(data) : data);
 }
 
 //**************************************************************************

@@ -10,6 +10,9 @@
 #include "s8k_cpu.h"
 #include "s8k_ram.h"
 #include "s8k_smdc.h"
+#include "s8k_mwdc.h"
+#include "s8k_tcc.h"
+#include "s8k_wdc.h"
 
 void zbi_s8k_cpu_cards(device_slot_interface &device)
 {
@@ -26,14 +29,14 @@ void zbi_s8k_ram_cards(device_slot_interface &device)
 
 void zbi_s8k_disk_cards(device_slot_interface &device)
 {
-	//TODO: WDC
-	//TODO: MWDC
+	device.option_add("wdc", ZBI_S8K_WDC);
+	device.option_add("mwdcii", ZBI_S8K_MWDCII);
 	device.option_add("smdc", ZBI_S8K_SMDC);
 }
 
 void zbi_s8k_tape_cards(device_slot_interface &device)
 {
-	//TODO: TCC
+	device.option_add("tcc", ZBI_S8K_TCC);
 	//TODO: MTC (9-Track Tape Controller (2x drives))
 }
 

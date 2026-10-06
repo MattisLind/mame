@@ -1,0 +1,60 @@
+{
+  "repository": "tpaxia/Zilog_S8000",
+  "revision": "5c874c92c7968812dd1a1368e8053159726341fa",
+  "files": [
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-000.bin",
+      "destination": "zeus-install/file-000.bin",
+      "size": 512,
+      "blob": "e6c96d499c476c9984cf95f2b1336d7435c52a22"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-001.bin",
+      "destination": "zeus-install/file-001.bin",
+      "size": 23040,
+      "blob": "390af3c7ae4c8d56482d65159a501265fdf758d7"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-002.bin",
+      "destination": "zeus-install/file-002.bin",
+      "size": 21504,
+      "blob": "c7c74314b44e3989849bea49352c56225d874c75"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-003.bin",
+      "destination": "zeus-install/file-003.bin",
+      "size": 17920,
+      "blob": "ee77bf7f6eed740e968caafad6877dbebd61d32e"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-004.bin",
+      "destination": "zeus-install/file-004.bin",
+      "size": 26624,
+      "blob": "ab95b5e8ed88ba78b9ae305e938d04c98fe795e6"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-005.dump",
+      "destination": "zeus-install/file-005.dump",
+      "size": 2805760,
+      "blob": "2b7eec79f83771b9f9728c8e61ca283a74984c1e"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-006.dump",
+      "destination": "zeus-install/file-006.dump",
+      "size": 51200,
+      "blob": "4b8c7d938b01326fc9f9a2340fdaf6202d06878c"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-007.dump",
+      "destination": "zeus-install/file-007.dump",
+      "size": 2641920,
+      "blob": "241b4b4691d2e32f6bb6ef7bb0609dae12f9256f"
+    },
+    {
+      "source": "tapes/extracted/install-3.21/logical/file-008.dump",
+      "destination": "zeus-install/file-008.dump",
+      "size": 3522560,
+      "blob": "62fc9d03a0373ae7cdf52394f1c60babd3d65d97"
+    }
+  ]
+}

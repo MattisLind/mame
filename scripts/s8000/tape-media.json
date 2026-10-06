@@ -1,0 +1,18 @@
+{
+  "repository": "tpaxia/Zilog_S8000",
+  "revision": "5c874c92c7968812dd1a1368e8053159726341fa",
+  "files": [
+    {
+      "source": "tapes/images/sadie-3.5.tap",
+      "destination": "tapes/sadie-3.5.tap",
+      "size": 811812,
+      "blob": "384a9279adcd7d229417b230ee9737c7b24cfe9e"
+    },
+    {
+      "source": "tapes/images/zeus-3.21-install.tap",
+      "destination": "tapes/zeus-3.21-install.tap",
+      "size": 11415116,
+      "blob": "689bb32b82d0c3bd0caeca74588a90c185ce8585"
+    }
+  ]
+}

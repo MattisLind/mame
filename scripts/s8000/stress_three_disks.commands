@@ -1,0 +1,66 @@
+# Commands sent one line per ZEUS multi-user console prompt (the login shell is csh).
+# Destructive: format only disposable extra disks prepared by prepare_multiuser_stress.py.
+/etc/mknod /dev/smd0 b 8 0
+/etc/mknod /dev/rsmd0 c 2 0
+/etc/mknod /dev/zd0 b 0 0
+/etc/mknod /dev/rzd0 c 32 0
+/etc/mkfs /dev/rsmd0 20000 16 256
+/etc/labelit /dev/rsmd0 /z/smd SMD0
+/etc/mkfs /dev/rzd0 20000 12 96
+/etc/labelit /dev/rzd0 /z/wd WDC0
+mkdir /z/smd /z/wd
+/etc/mount /dev/smd0 /z/smd
+/etc/mount /dev/zd0 /z/wd
+mkdir /z/stress
+rm -f /z/stress/forward.ok /z/stress/reverse.ok
+cat /zeus /bin/sh /etc/fsck /bin/cp /bin/dd /bin/tar > /z/stress/seed
+cp /z/stress/seed /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+cat /z/stress/seed >> /z/stress/payload
+ls -l /z/stress/payload
+echo "for n in 1 2 3 4 5" > /z/stress/forward.sh
+echo "do" >> /z/stress/forward.sh
+echo "cp /z/stress/payload /z/smd/fwd || exit 1; cmp /z/stress/payload /z/smd/fwd || exit 1" >> /z/stress/forward.sh
+echo "cp /z/smd/fwd /z/wd/fwd || exit 1; cmp /z/smd/fwd /z/wd/fwd || exit 1" >> /z/stress/forward.sh
+echo "cp /z/wd/fwd /z/stress/fromwd || exit 1; cmp /z/wd/fwd /z/stress/fromwd || exit 1" >> /z/stress/forward.sh
+echo 'echo FORWARD_ROUND=$n' >> /z/stress/forward.sh
+echo "done" >> /z/stress/forward.sh
+echo "echo FORWARD_PASS > /z/stress/forward.ok" >> /z/stress/forward.sh
+/bin/sh /z/stress/forward.sh &
+echo "for n in 1 2 3 4 5" > /z/stress/reverse.sh
+echo "do" >> /z/stress/reverse.sh
+echo "cp /z/stress/payload /z/wd/rev || exit 1; cmp /z/stress/payload /z/wd/rev || exit 1" >> /z/stress/reverse.sh
+echo "cp /z/wd/rev /z/smd/rev || exit 1; cmp /z/wd/rev /z/smd/rev || exit 1" >> /z/stress/reverse.sh
+echo "cp /z/smd/rev /z/stress/fromsmd || exit 1; cmp /z/smd/rev /z/stress/fromsmd || exit 1" >> /z/stress/reverse.sh
+echo 'echo REVERSE_ROUND=$n' >> /z/stress/reverse.sh
+echo "done" >> /z/stress/reverse.sh
+echo "echo REVERSE_PASS > /z/stress/reverse.ok" >> /z/stress/reverse.sh
+/bin/sh /z/stress/reverse.sh &
+dd if=/z/stress/payload of=/dev/rct0a bs=4096
+dd if=/dev/rct0a of=/z/wd/tape bs=4096
+cmp /z/stress/payload /z/wd/tape; echo TAPE_CMP_STATUS=$status
+mkdir /z/smd/restore
+cd /z/stress
+tar cf /dev/rct0a seed payload
+cd /z/smd/restore
+tar xf /dev/rct0a
+cmp /z/stress/seed seed; echo ARCHIVE_SEED_STATUS=$status
+cmp /z/stress/payload payload; echo ARCHIVE_PAYLOAD_STATUS=$status
+cd /
+wait
+cat /z/stress/forward.ok /z/stress/reverse.ok
+cmp /z/stress/payload /z/stress/fromwd; echo FORWARD_CMP_STATUS=$status
+cmp /z/stress/payload /z/stress/fromsmd; echo REVERSE_CMP_STATUS=$status
+sum /z/stress/payload /z/smd/fwd /z/wd/fwd /z/wd/rev /z/smd/rev /z/wd/tape
+sync
+/etc/umount /dev/smd0
+/etc/umount /dev/zd0
+/etc/fsck -n /dev/rsmd0
+/etc/fsck -n /dev/rzd0
+sync; sleep 5; sync; sleep 5
+echo THREE_STRESS_DONE

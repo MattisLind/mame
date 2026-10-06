@@ -1,0 +1,456 @@
+{
+  "repository": "tpaxia/Zilog_S8000",
+  "revision": "5c874c92c7968812dd1a1368e8053159726341fa",
+  "files": [
+    {
+      "source": "roms/cpu_34-0715-01a.u76",
+      "destination": "s8000/cpu_34-0715-01a.u76",
+      "size": 4096,
+      "blob": "a349b75947a4fb06fdffb44d981e5725059b82df"
+    },
+    {
+      "source": "roms/cpu_34-0715-02_v_2.2.u76",
+      "destination": "s8000/cpu_34-0715-02_v_2.2.u76",
+      "size": 4096,
+      "blob": "e63e2cfa8da88378efdd6f9f5cf4b7da6c2d618b"
+    },
+    {
+      "source": "roms/cpu_34-0715-03a.u76",
+      "destination": "s8000/cpu_34-0715-03a.u76",
+      "size": 4096,
+      "blob": "88e618970251f1711d36fd8c652f16adefb05b2e"
+    },
+    {
+      "source": "roms/cpu_34-0716-01a.u74",
+      "destination": "s8000/cpu_34-0716-01a.u74",
+      "size": 4096,
+      "blob": "b0c321384583a00a238e2e2b2fd86ceb89bd08a2"
+    },
+    {
+      "source": "roms/cpu_34-0716-02_v_2.2.u74",
+      "destination": "s8000/cpu_34-0716-02_v_2.2.u74",
+      "size": 4096,
+      "blob": "0dd9f2361fb0f4d77995ed79f815a98fde3304fd"
+    },
+    {
+      "source": "roms/cpu_34-0716-03a.u74",
+      "destination": "s8000/cpu_34-0716-03a.u74",
+      "size": 4096,
+      "blob": "e60f752f24a2f465c96aebad5ccd9deaff9fa80f"
+    },
+    {
+      "source": "roms/cpu_34-0716-03a_8user.u74",
+      "destination": "s8000/cpu_34-0716-03a_8user.u74",
+      "size": 4096,
+      "blob": "f9568d28a3dacae4f109ccbbbaefe40a6ad4ae37"
+    },
+    {
+      "source": "roms/cpu_34-0717-01a.u75",
+      "destination": "s8000/cpu_34-0717-01a.u75",
+      "size": 4096,
+      "blob": "c51a7194a63dfefa7434571e66da02481c5787f8"
+    },
+    {
+      "source": "roms/cpu_34-0717-02_v_2.2.u75",
+      "destination": "s8000/cpu_34-0717-02_v_2.2.u75",
+      "size": 4096,
+      "blob": "e9163d10db932e5a2d6ea05233ab86a87bb018b1"
+    },
+    {
+      "source": "roms/cpu_34-0717-03a.u75",
+      "destination": "s8000/cpu_34-0717-03a.u75",
+      "size": 4096,
+      "blob": "cc78c0115a52b1856fe702653db5d98f2ec6759e"
+    },
+    {
+      "source": "roms/cpu_34-0718-01a.u77",
+      "destination": "s8000/cpu_34-0718-01a.u77",
+      "size": 4096,
+      "blob": "da4583208dc3026eed920e28b101f325434db7a6"
+    },
+    {
+      "source": "roms/cpu_34-0718-02_v_2.2.u77",
+      "destination": "s8000/cpu_34-0718-02_v_2.2.u77",
+      "size": 4096,
+      "blob": "b3b667144ae84253e776672005c8baadeb162da3"
+    },
+    {
+      "source": "roms/cpu_34-0718-03a.u77",
+      "destination": "s8000/cpu_34-0718-03a.u77",
+      "size": 4096,
+      "blob": "55f67e60f61190ddcd90e5a238d62b8d4fcd3ebc"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-0/logical/file-000.bin",
+      "destination": "sadie/track-0/file-000.bin",
+      "size": 8000,
+      "blob": "f4d186066c8b15b22bc3d0d8ac7a42f6a4308083"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-0/logical/file-001.bin",
+      "destination": "sadie/track-0/file-001.bin",
+      "size": 27648,
+      "blob": "cfe6e5e18b97615b5a23db8538ed09cb3fd1ab17"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-0/logical/file-002.bin",
+      "destination": "sadie/track-0/file-002.bin",
+      "size": 14336,
+      "blob": "9bd0ea544211740dd4685052a6f9ae1a3c859c33"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-0/logical/file-003.bin",
+      "destination": "sadie/track-0/file-003.bin",
+      "size": 40000,
+      "blob": "2cccd19088a0a6553257267ea475e9e1d8ea71f6"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-000.bin",
+      "destination": "sadie/track-1/file-000.bin",
+      "size": 24576,
+      "blob": "f0b42e47e316558b187d6d0fffecb1fc6ab3a697"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-001.bin",
+      "destination": "sadie/track-1/file-001.bin",
+      "size": 18432,
+      "blob": "9c99821f878b9e5e26c73f3155c03af1ae877909"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-002.bin",
+      "destination": "sadie/track-1/file-002.bin",
+      "size": 20480,
+      "blob": "bf5bc796a1051d160adf349b17f935f95424067f"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-003.bin",
+      "destination": "sadie/track-1/file-003.bin",
+      "size": 27648,
+      "blob": "12464eb8e6f1120143782debc3df98dfc3c5b67f"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-004.bin",
+      "destination": "sadie/track-1/file-004.bin",
+      "size": 17408,
+      "blob": "d7758fbee3d22b714176d358bc01aea8e20c21a9"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-005.bin",
+      "destination": "sadie/track-1/file-005.bin",
+      "size": 22528,
+      "blob": "d797a4a0d1bf0406da140680f6ed2d34be0d0cea"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-006.bin",
+      "destination": "sadie/track-1/file-006.bin",
+      "size": 15360,
+      "blob": "7d5f053c45aaa266f4a64382c1056bf073b8794f"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-007.bin",
+      "destination": "sadie/track-1/file-007.bin",
+      "size": 17408,
+      "blob": "d55920dfcc4bb2770719ee10aa230c156387152b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-008.bin",
+      "destination": "sadie/track-1/file-008.bin",
+      "size": 27648,
+      "blob": "992ff1ce80d8f2c29d6109e44536622871bace72"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-009.bin",
+      "destination": "sadie/track-1/file-009.bin",
+      "size": 14336,
+      "blob": "c43e1ad5762ce7106ffc85af44a7d2d2d37d2a46"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-010.bin",
+      "destination": "sadie/track-1/file-010.bin",
+      "size": 15360,
+      "blob": "b7a44890d6219ba88d3c04132b590e6807f13dcf"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-011.bin",
+      "destination": "sadie/track-1/file-011.bin",
+      "size": 14336,
+      "blob": "ddcb3f4bd12c4bbb020e004c4f6f52898f450853"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-012.bin",
+      "destination": "sadie/track-1/file-012.bin",
+      "size": 15360,
+      "blob": "29d24286c707f7a15007d295c3b542725853b45a"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-013.bin",
+      "destination": "sadie/track-1/file-013.bin",
+      "size": 24576,
+      "blob": "cee7b3cdcd44bea0aba62f85f276cc8b821a90b6"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-014.bin",
+      "destination": "sadie/track-1/file-014.bin",
+      "size": 13312,
+      "blob": "0aacf5a83d57c76a3ce5faf7d352e14d35cb2a58"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-015.bin",
+      "destination": "sadie/track-1/file-015.bin",
+      "size": 16384,
+      "blob": "afbac07f76722935d7f3117eccb957ca06c51675"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-016.bin",
+      "destination": "sadie/track-1/file-016.bin",
+      "size": 19456,
+      "blob": "ef9058242c3d96e33e0d808386e7cd36347bb14b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-017.bin",
+      "destination": "sadie/track-1/file-017.bin",
+      "size": 11264,
+      "blob": "19865076ca80d363c7c6d4254d37191c2bcea94c"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-018.bin",
+      "destination": "sadie/track-1/file-018.bin",
+      "size": 8192,
+      "blob": "b86430f07c61df574d1ec86c41f096dc76403589"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-019.bin",
+      "destination": "sadie/track-1/file-019.bin",
+      "size": 15360,
+      "blob": "808e93396c0a68286efe30899d46219affaf0c1f"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-020.bin",
+      "destination": "sadie/track-1/file-020.bin",
+      "size": 12288,
+      "blob": "41fbd265c73e830f6c919b3df95af078b6db29dc"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-021.bin",
+      "destination": "sadie/track-1/file-021.bin",
+      "size": 23552,
+      "blob": "7c125ef3ad5110166b4d784fbc4e9a7eab035394"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-022.bin",
+      "destination": "sadie/track-1/file-022.bin",
+      "size": 16384,
+      "blob": "5ab374815ec7be8ff232e136e4bc83b0656a9e2c"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-023.bin",
+      "destination": "sadie/track-1/file-023.bin",
+      "size": 10240,
+      "blob": "9c47723ec2ca2f35e6bbc9efe765590e9fd3fdc3"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-024.bin",
+      "destination": "sadie/track-1/file-024.bin",
+      "size": 12288,
+      "blob": "c2d9a8af371ed7336d55d8fe9e0141cf0cc5f923"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-025.bin",
+      "destination": "sadie/track-1/file-025.bin",
+      "size": 19456,
+      "blob": "433ee54f5bf7b9f8a997c6f23149bc83d468714a"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-026.bin",
+      "destination": "sadie/track-1/file-026.bin",
+      "size": 9216,
+      "blob": "f9d8f157224a688ff24f84a66fe80a2f56d8ad7e"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-027.bin",
+      "destination": "sadie/track-1/file-027.bin",
+      "size": 19456,
+      "blob": "e8b32a54b010f530b4363e4b59badcf4fbd13c2b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-028.bin",
+      "destination": "sadie/track-1/file-028.bin",
+      "size": 21504,
+      "blob": "c0dac4856d947ec6c26092376333ad8a37cea6ab"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-029.bin",
+      "destination": "sadie/track-1/file-029.bin",
+      "size": 23552,
+      "blob": "b4f4c75d387e6ac9a17561d2892528c6ad7f5c52"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-030.bin",
+      "destination": "sadie/track-1/file-030.bin",
+      "size": 22528,
+      "blob": "9b9dfcb6a0f8a1170418cc1a842dd8328a6eacb3"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-031.bin",
+      "destination": "sadie/track-1/file-031.bin",
+      "size": 18432,
+      "blob": "a842d43e3bec3988da36f626985450d8340de225"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-032.bin",
+      "destination": "sadie/track-1/file-032.bin",
+      "size": 27648,
+      "blob": "49a80ac087e9a334f10844ab90bc03a538c4940a"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-033.bin",
+      "destination": "sadie/track-1/file-033.bin",
+      "size": 27648,
+      "blob": "2c6f3c389d706a0ed54d4ea0ef10fa3ea84a7193"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-034.bin",
+      "destination": "sadie/track-1/file-034.bin",
+      "size": 18432,
+      "blob": "c19c3f9c88d3ac7626da4289f428031469782730"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-035.bin",
+      "destination": "sadie/track-1/file-035.bin",
+      "size": 24576,
+      "blob": "5f9494dafa64681657999f0e135166a5ce90785d"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-1/logical/file-036.bin",
+      "destination": "sadie/track-1/file-036.bin",
+      "size": 15360,
+      "blob": "2600e2e596c972a064493d06f9bfea94aeb56f86"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-000.bin",
+      "destination": "sadie/track-2/file-000.bin",
+      "size": 8000,
+      "blob": "0d7568eb58e390652b68549aec97b4ec19dda816"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-001.bin",
+      "destination": "sadie/track-2/file-001.bin",
+      "size": 1000,
+      "blob": "23283135b019975a79f52242ffe0005ade6a57ac"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-002.bin",
+      "destination": "sadie/track-2/file-002.bin",
+      "size": 1300,
+      "blob": "10509b5723c36b193d2bb166107edb69e9bbf2ff"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-003.bin",
+      "destination": "sadie/track-2/file-003.bin",
+      "size": 1300,
+      "blob": "80d37fabb9f9d631d342b696de86c5c0750fb367"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-004.bin",
+      "destination": "sadie/track-2/file-004.bin",
+      "size": 1300,
+      "blob": "2f455f2df5982dd5ce4376c052304d9256a2cb81"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-005.bin",
+      "destination": "sadie/track-2/file-005.bin",
+      "size": 1300,
+      "blob": "c490e2641a0a4413ec2029e4b7f6ecff169fd175"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-006.bin",
+      "destination": "sadie/track-2/file-006.bin",
+      "size": 1300,
+      "blob": "eeb624f37d0ce173f0ce76cf8e09877db19e9119"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-007.bin",
+      "destination": "sadie/track-2/file-007.bin",
+      "size": 1300,
+      "blob": "4c09d7c95af1d6f3adc3a8341c462245455fe41d"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-008.bin",
+      "destination": "sadie/track-2/file-008.bin",
+      "size": 1300,
+      "blob": "b8b23c9ec91db9711717dd16a0f96bd77918bbbc"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-009.bin",
+      "destination": "sadie/track-2/file-009.bin",
+      "size": 1300,
+      "blob": "32ac0e5ce9d8700d65ecb29905081a65aa10d3e0"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-010.bin",
+      "destination": "sadie/track-2/file-010.bin",
+      "size": 1300,
+      "blob": "2f10a0bf88601ee779c418d04689e3caa1c2dfc2"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-011.bin",
+      "destination": "sadie/track-2/file-011.bin",
+      "size": 1300,
+      "blob": "d2a55b9a123a240a568069034dd2425089cb164c"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-012.bin",
+      "destination": "sadie/track-2/file-012.bin",
+      "size": 1300,
+      "blob": "b170d3f4d471f39ea0e83208bf9638ccbbc7ac90"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-013.bin",
+      "destination": "sadie/track-2/file-013.bin",
+      "size": 1300,
+      "blob": "9dcf0fd9cc3b639d1250994db7bae3dfaf05e776"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-014.bin",
+      "destination": "sadie/track-2/file-014.bin",
+      "size": 1300,
+      "blob": "0ccbeeb9c5f4de7a8bcc9c9e769b4ce82518db89"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-015.bin",
+      "destination": "sadie/track-2/file-015.bin",
+      "size": 1300,
+      "blob": "5c3f122e04b945e44e3c13a0727cb7fff340ce31"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-016.bin",
+      "destination": "sadie/track-2/file-016.bin",
+      "size": 1300,
+      "blob": "11431bf9d6f8c11ea557100ae879d362803094c3"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-017.bin",
+      "destination": "sadie/track-2/file-017.bin",
+      "size": 1300,
+      "blob": "0b70c57e3dbcab803a4be89b34c1cccecb69da2b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-018.bin",
+      "destination": "sadie/track-2/file-018.bin",
+      "size": 1300,
+      "blob": "0b70c57e3dbcab803a4be89b34c1cccecb69da2b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-019.bin",
+      "destination": "sadie/track-2/file-019.bin",
+      "size": 1300,
+      "blob": "0b70c57e3dbcab803a4be89b34c1cccecb69da2b"
+    },
+    {
+      "source": "tapes/extracted/sadie-3.5/track-2/logical/file-020.bin",
+      "destination": "sadie/track-2/file-020.bin",
+      "size": 1300,
+      "blob": "0b70c57e3dbcab803a4be89b34c1cccecb69da2b"
+    }
+  ]
+}

@@ -6694,5 +6694,11 @@ if (BUSES["ZBI"]~=null) then
 		MAME_DIR .. "src/devices/bus/zbi/s8k_ram.h",
 		MAME_DIR .. "src/devices/bus/zbi/s8k_smdc.cpp",
 		MAME_DIR .. "src/devices/bus/zbi/s8k_smdc.h",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_mwdc.cpp",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_mwdc.h",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_wdc.cpp",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_wdc.h",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_tcc.cpp",
+		MAME_DIR .. "src/devices/bus/zbi/s8k_tcc.h",
 	}
 end

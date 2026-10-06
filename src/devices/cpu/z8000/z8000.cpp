@@ -38,6 +38,8 @@ z8002_device::z8002_device(const machine_config &mconfig, device_type type, cons
 	, m_stack_config("stack", ENDIANNESS_BIG, 16, addrbits, 0)
 	, m_sio_config("io_spc", ENDIANNESS_BIG, 16, 16, 0)
 	, m_iack_in(*this, 0xffff)
+	, m_io_word_r(*this, 0xffff)
+	, m_io_word_w(*this)
 	, m_mo_out(*this)
 	, m_ns_out(*this)
 	, m_busack_out(*this)
@@ -245,6 +247,8 @@ uint8_t z8002_device::RDPORT_B(int mode, uint16_t addr)
 
 uint16_t z8002_device::RDPORT_W(int mode, uint16_t addr)
 {
+	if (!mode && !m_io_word_r.isunset())
+		return m_io_word_r(addr);
 	memory_access<16, 1, 0, ENDIANNESS_BIG>::specific &space = (mode == 0) ? m_io : m_sio;
 	if (BIT(addr, 0))
 		return swapendian_int16(space.read_word(addr & ~1, 0xffff));
@@ -261,6 +265,11 @@ void z8002_device::WRPORT_B(int mode, uint16_t addr, uint8_t value)
 
 void z8002_device::WRPORT_W(int mode, uint16_t addr, uint16_t value)
 {
+	if (!mode && !m_io_word_w.isunset())
+	{
+		m_io_word_w(addr, value);
+		return;
+	}
 	memory_access<16, 1, 0, ENDIANNESS_BIG>::specific &space = (mode == 0) ? m_io : m_sio;
 	if (BIT(addr, 0))
 		space.write_word(addr & ~1, swapendian_int16(value), 0xffff);

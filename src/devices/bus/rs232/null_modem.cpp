@@ -2,9 +2,15 @@
 // copyright-holders:smf,Carl
 #include "emu.h"
 #include "null_modem.h"
+#include "machine/terminal.h"
 
 null_modem_device::null_modem_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
-	device_t(mconfig, NULL_MODEM, tag, owner, clock),
+	null_modem_device(mconfig, NULL_MODEM, tag, owner, clock)
+{
+}
+
+null_modem_device::null_modem_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock) :
+	device_t(mconfig, type, tag, owner, clock),
 	device_serial_interface(mconfig, *this),
 	device_rs232_port_interface(mconfig, *this),
 	m_stream(*this, "stream"),
@@ -182,9 +188,7 @@ void null_modem_device::rcv_complete()
 	receive_register_extract();
 
 	uint8_t const data = get_received_char();
-	if (m_flow->read() != 4)
-		m_stream->output(data);
-	else
+	if (m_flow->read() == 4)
 	{
 		switch (data)
 		{
@@ -199,8 +203,34 @@ void null_modem_device::rcv_complete()
 		default:
 			break;
 		}
-		m_stream->output(data);
 	}
+	received_byte(data);
+}
+
+void null_modem_device::received_byte(uint8_t data)
+{
+	m_stream->output(data);
+}
+
+null_modem_terminal_device::null_modem_terminal_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock) :
+	null_modem_device(mconfig, NULL_MODEM_TERMINAL, tag, owner, clock),
+	m_terminal(*this, "terminal")
+{
+}
+
+void null_modem_terminal_device::device_add_mconfig(machine_config &config)
+{
+	null_modem_device::device_add_mconfig(config);
+	// A passive display: leave its keyboard callback unconnected.
+	GENERIC_TERMINAL(config, m_terminal);
+}
+
+void null_modem_terminal_device::received_byte(uint8_t data)
+{
+	null_modem_device::received_byte(data);
+	// The monitor displays ASCII; retain the full byte in the external stream.
+	m_terminal->write(data & 0x7f);
 }
 
 DEFINE_DEVICE_TYPE(NULL_MODEM, null_modem_device, "null_modem", "RS-232 Null Modem")
+DEFINE_DEVICE_TYPE(NULL_MODEM_TERMINAL, null_modem_terminal_device, "null_modem_terminal", "RS-232 Null Modem with Terminal Monitor")

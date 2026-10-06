@@ -84,6 +84,8 @@ public:
 
 	void assign_iospace_installer(address_space_installer *installer);
 	address_space_installer *iospace() const;
+	bool io_word_r(offs_t port, uint16_t &data);
+	bool io_word_w(offs_t port, uint16_t data);
 
 	void add_to_daisy_chain(std::string tag)
 		{ m_daisy.push_back(tag); }
@@ -162,6 +164,8 @@ public:
 
 protected:
 	virtual void card_memerr_w(int state) { }
+	virtual bool card_io_word_r(offs_t port, uint16_t &data) { return false; }
+	virtual bool card_io_word_w(offs_t port, uint16_t data) { return false; }
 	virtual void card_busreq_w(int state) { }
 	virtual void card_cpureq_w(int state) { }
 	virtual void card_cpuavail_w(int state) { }

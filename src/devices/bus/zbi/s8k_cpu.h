@@ -72,6 +72,8 @@ protected:
 	uint16_t segtack_r();
 	uint16_t viack_r();
 	uint16_t nviack_r();
+	uint16_t io_word_r(offs_t port);
+	void io_word_w(offs_t port, uint16_t data);
 	void mmu_instruction_end();
 	void memory_error_control_w(bool enable);
 

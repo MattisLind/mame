@@ -9,6 +9,8 @@
 #include "imagedev/bitbngr.h"
 #include "diserial.h"
 
+class generic_terminal_device;
+
 class null_modem_device : public device_t,
 	public device_serial_interface,
 	public device_rs232_port_interface
@@ -23,6 +25,8 @@ public:
 	void update_serial(int state);
 
 protected:
+	null_modem_device(const machine_config &mconfig, device_type type, const char *tag, device_t *owner, uint32_t clock);
+
 	virtual ioport_constructor device_input_ports() const override ATTR_COLD;
 	virtual void device_start() override ATTR_COLD;
 	virtual void device_reset() override ATTR_COLD;
@@ -31,6 +35,7 @@ protected:
 	virtual void tra_callback() override;
 	virtual void tra_complete() override;
 	virtual void rcv_complete() override;
+	virtual void received_byte(uint8_t data);
 
 private:
 	TIMER_CALLBACK_MEMBER(update_queue);
@@ -56,5 +61,20 @@ private:
 };
 
 DECLARE_DEVICE_TYPE(NULL_MODEM, null_modem_device)
+
+class null_modem_terminal_device : public null_modem_device
+{
+public:
+	null_modem_terminal_device(const machine_config &mconfig, const char *tag, device_t *owner, uint32_t clock);
+
+protected:
+	virtual void device_add_mconfig(machine_config &config) override ATTR_COLD;
+	virtual void received_byte(uint8_t data) override;
+
+private:
+	required_device<generic_terminal_device> m_terminal;
+};
+
+DECLARE_DEVICE_TYPE(NULL_MODEM_TERMINAL, null_modem_terminal_device)
 
 #endif // MAME_BUS_RS232_NULL_MODEM_H

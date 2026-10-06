@@ -98,6 +98,20 @@ void zbi_bus_device::memerr_w(int state)
 		entry.card_memerr_w(state);
 }
 
+bool zbi_bus_device::io_word_r(offs_t port, uint16_t &data)
+{
+	for (device_zbi_card_interface &entry : m_device_list)
+		if (entry.card_io_word_r(port, data)) return true;
+	return false;
+}
+
+bool zbi_bus_device::io_word_w(offs_t port, uint16_t data)
+{
+	for (device_zbi_card_interface &entry : m_device_list)
+		if (entry.card_io_word_w(port, data)) return true;
+	return false;
+}
+
 void zbi_bus_device::busreq_w(int state)
 {
 	for (device_zbi_card_interface &entry : m_device_list)
